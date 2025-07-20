@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Harvest Club</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg,#00AEAE 0%,#008B8B 100%);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.96);
+      max-width: 426px;
+      width: 95vw;
+      border-radius: 28px;
+      box-shadow: 0 8px 38px rgba(0,139,139,0.12);
+      padding: 42px 34px 32px 34px;
+      margin: 48px auto;
+      animation: fadeInUp 1s cubic-bezier(.62,.28,.23,.99);
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .contact-header img {
+      width: 60px;
+      margin-bottom: 7px;
+      border-radius: 13px;
+    }
+    .contact-header h1 {
+      font-size: 2rem;
+      color: #008B8B;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .contact-header .subtitle {
+      color: #555;
+      opacity: 0.83;
+      font-size: 1.01rem;
+      font-weight: 500;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 3px;
+    }
+    .form-group label {
+      position: absolute;
+      top: 13px;
+      left: 16px;
+      color: #008080b4;
+      font-size: 1rem;
+      font-weight: 500;
+      pointer-events: none;
+      background: transparent;
+      transition: 0.23s;
+      padding: 0 4px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px 12px 16px;
+      font-size: 1rem;
+      border-radius: 9px;
+      border: 1.5px solid #e0e0e0;
+      background: #f8fafb;
+      transition: border-color 0.26s, background 0.19s;
+      outline: none;
+      margin-top: 2px;
+      font-family: 'Poppins',sans-serif;
+      resize: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #008B8B;
+      background: #fff;
+    }
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -13px;
+      left: 10px;
+      background: rgba(255,255,255,0.92);
+      font-size: 0.93rem;
+      color: #008B8B;
+      padding: 0 3px;
+    }
+    .contact-btn {
+      margin-top: 6px;
+      padding: 12px 0;
+      width: 100%;
+      background: linear-gradient(90deg,#00AEAE,#008B8B);
+      color: #fff;
+      border: none;
+      border-radius: 11px;
+      font-size: 1.07rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,139,139,0.11);
+      transition: background 0.28s, transform 0.16s;
+      animation: bounceIn 0.85s 0.3s backwards;
+    }
+    .contact-btn:hover {
+      background: linear-gradient(90deg,#008B8B,#00AEAE);
+      transform: translateY(-2px) scale(1.025);
+      box-shadow: 0 4px 14px rgba(0,139,139,0.16);
+    }
+    .contact-info {
+      margin-top: 14px;
+      margin-bottom: 4px;
+      color: #555c;
+      font-size: 0.97rem;
+      text-align: center;
+    }
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(54px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes bounceIn {
+      0%{opacity:0; transform:scale(0.92);}
+      60%{opacity:1; transform:scale(1.045);}
+      100%{opacity:1; transform:scale(1);}
+    }
+    @media (max-width:530px) {
+      .contact-card {padding: 20px 2vw 12px 2vw;}
+      .contact-header img {width: 38px;}
+      .contact-header h1 {font-size: 1.1rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-card">
+    <div class="contact-header">
+      <img src="../assets/images/harvest logo pn.png" alt="Harvest Logo"/>
+      <h1>Contact Us</h1>
+      <div class="subtitle">We're here for your questions and feedback</div>
+    </div>
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/mwpbwzgp"
+      method="POST"
+      autocomplete="on"
+    >
+      <div class="form-group">
+        <input type="text" id="name" name="Name" required placeholder=" " autocomplete="name"/>
+        <label for="name">Your Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="Email" required placeholder=" " autocomplete="email"/>
+        <label for="email">Email Address</label>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="Message" required placeholder=" " rows="5"></textarea>
+        <label for="message">Your Message</label>
+      </div>
+      <button class="contact-btn" type="submit">Send</button>
+    </form>
+    <div class="contact-info">
+      Or reach us at <b>harvestclub.presidency@gmail.com</b>
+    </div>
+  </div>
+</body>
+</html>

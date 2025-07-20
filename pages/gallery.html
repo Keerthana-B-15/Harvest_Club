@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Harvest Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="container py-4">
+  <h2 class="gallery-title">GALLERY</h2>
+  <div id="category-section" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col"><div class="card" onclick="showGallery('inauguration')"><img src="../assets/images/inauguration_images/inauguration.JPG" class="card-img-top" alt="Inauguration"><div class="card-body"><p class="card-text">Harvest Club Inauguration</p></div></div></div>
+    <div class="col"><div class="card" onclick="showGallery('sheleads')"><img src="../assets/images/hackathon_images/sheleads.jpg" class="card-img-top" alt="SHE LEADS"><div class="card-body"><p class="card-text">SHE LEADS Hackathon</p></div></div></div>
+    <div class="col"><div class="card" onclick="showGallery('industrial')"><img src="../assets/images/iv2.jpg" class="card-img-top" alt="industrail visit"><div class="card-body"><p class="card-text">Industrial Visit</p></div></div></div>
+    <div class="col"><div class="card" onclick="showGallery('online')"><img src="../assets/images/onlineevent.jpg" class="card-img-top" alt="Online Events"><div class="card-body"><p class="card-text">Online Events</p></div></div></div>
+    <div class="col"><div class="card" onclick="showGallery('offline')"><img src="../assets/images/offline.jpg" class="card-img-top" alt="Offline Events"><div class="card-body"><p class="card-text">Offline Events</p></div></div></div>
+    <div class="col"><div class="card" onclick="showGallery('more')"><img src="../assets/images/moreevents.png" class="card-img-top" alt="More Events"><div class="card-body"><p class="card-text">More Events</p></div></div></div>
+  </div>
+  <div id="inauguration-gallery" class="hidden">
+    <p class="back-button" onclick="goBackGallery()">← Back to Categories</p>
+    <h2 class="gallery-title">Harvest Club Inauguration</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col"><div class="card"><img src="../assets/images/inauguration_images/Welcomecermony.png" class="card-img-top"><div class="card-body"><p class="card-text">Welcome Ceremony</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/inauguration_images/Guest Speech.png" class="card-img-top"><div class="card-body"><p class="card-text">Guest Speech</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/inauguration_images/ing3.JPG" class="card-img-top"><div class="card-body"><p class="card-text">Lamp Lighting</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/inauguration_images/COnvenorSpeech.png" class="card-img-top"><div class="card-body"><p class="card-text">Club Convenor Speech</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/inauguration_images/ing6.JPG" class="card-img-top"><div class="card-body"><p class="card-text">Audience View</p></div></div></div>
+    </div>
+  </div>
+  <div id="sheleads-gallery" class="hidden">
+    <p class="back-button" onclick="goBackGallery()">← Back to Categories</p>
+    <h2 class="gallery-title">SHE LEADS Hackathon</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col"><div class="card"><img src="../assets/images/hackathon_images/ideas_in_action.png" class="card-img-top"><div class="card-body"><p class="card-text">Ideas In Action</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/hackathon_images/lamplihting.png" class="card-img-top"><div class="card-body"><p class="card-text">Lamp Lighting</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/hackathon_images/pillars_of_support.png" class="card-img-top"><div class="card-body"><p class="card-text">Pillar Of Support</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/hackathon_images/together_we_lead.png" class="card-img-top"><div class="card-body"><p class="card-text">Together We Lead</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/hackathon_images/path_way_to_purpose.png" class="card-img-top"><div class="card-body"><p class="card-text">Path Way to Purpose</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/hackathon_images/engaged_minds.png" class="card-img-top"><div class="card-body"><p class="card-text">Engaged Minds</p></div></div></div>
+    </div>
+  </div>
+  <!-- INDUSTRIAL VISIT GALLERY -->
+<div id="industrial-gallery" class="hidden">
+  <p class="back-button" onclick="goBackGallery()">← Back to Categories</p>
+  <h2 class="gallery-title">Industrial Visit</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/group_photo.jpg" class="card-img-top"><div class="card-body"><p class="card-text">Harvest Team</p></div></div></div>
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/talkon_agriculture.JPG" class="card-img-top"><div class="card-body"><p class="card-text">Talk on Agriculture</p></div></div></div>
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/rock_identification.png" class="card-img-top"><div class="card-body"><p class="card-text">Rock Identification</p></div></div></div>
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/ayurvedic_plants.jpg" class="card-img-top"><div class="card-body"><p class="card-text">Ayurvedic Plants</p></div></div></div>
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/dizitization.JPG" class="card-img-top"><div class="card-body"><p class="card-text">Drip Irrigation</p></div></div></div>
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/drip.JPG" class="card-img-top"><div class="card-body"><p class="card-text">Moisture Check</p></div></div></div>
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/group_photo_gkvk.png" class="card-img-top"><div class="card-body"><p class="card-text">Group Photo at GKVK</p></div></div></div>
+    <div class="col"><div class="card"><img src="../assets/images/industrial_visit_images/talkon_agriculture_automation.png" class="card-img-top"><div class="card-body"><p class="card-text">Agri Automation</p></div></div></div>
+  </div>
+</div>
+  <div id="online-gallery" class="hidden">
+    <p class="back-button" onclick="goBackGallery()">← Back to Categories</p>
+    <h2 class="gallery-title">Online Events</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col"><div class="card"><img src="../assets/images/events_images/techniques for object in satellite imagery_online.png" class="card-img-top"><div class="card-body"><p class="card-text">Techniques for object in satellite imagery</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/events_images/reinforcement lerning meeting 5g network_online.jpg" class="card-img-top"><div class="card-body"><p class="card-text">Reinforcement lerning meeting 5g network</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/events_images/clod based solution for enhancing agricultural activity_online.PNG" class="card-img-top"><div class="card-body"><p class="card-text">Clod based solution for enhancing agricultural activity</p></div></div></div>
+    </div>
+  </div>
+  <div id="offline-gallery" class="hidden">
+    <p class="back-button" onclick="goBackGallery()">← Back to Categories</p>
+    <h2 class="gallery-title">Offline Events</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+       <div class="col"><div class="card"><img src="../assets/images/events_images/responsible ai_photo.jpg" class="card-img-top"><div class="card-body"><p class="card-text">Responsible AI</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/events_images/tranforming businesses with cutting-edge ai solutions from generative ai to intellegent automation_photo.JPG" class="card-img-top"><div class="card-body"><p class="card-text">Tranforming businesses with cutting-edge ai solutions from generative ai to intellegent automation</p></div></div></div>
+       <div class="col"><div class="card"><img src="../assets/images/events_images/an insight into vehicle automation _photo.jpg" class="card-img-top"><div class="card-body"><p class="card-text">An insight into vehicle automation</p></div></div></div>
+    </div> 
+  </div>
+  </div>
+  <div id="more-gallery" class="hidden">
+    <p class="back-button" onclick="goBackGallery()">← Back to Categories</p>
+    <h2 class="gallery-title">More Events</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+       <div class="col"><div class="card"><img src="../assets/images/Team_meet.jpg" class="card-img-top"><div class="card-body"><p class="card-text">Team Meet UP</p></div></div></div>
+      <div class="col"><div class="card"><img src="../assets/images/Pledge.jpg" class="card-img-top"><div class="card-body"><p class="card-text">AI pledge</p></div></div></div>
+    </div>
+  </div>
+</div>
+<!--RESOURCES-->
+<!-- Harvest Club Resources Page - Follows UI/UX Theme Guide -->
+<div class="container my-5">
+<h2 class="text-center mb-4 section-title">Event Resources</h2>
+  <div id="resources-section" class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Inauguration Card -->
+    <div class="col">
+      <div class="card h-100 text-center p-3">
+        <img src="../assets/images/resources/offline_posters/inauguration_poster (2).jpg" class="card-img-top rounded" alt="Inauguration Poster">
+        <div class="card-body">
+          <h5 class="card-title">Inauguration</h5>
+          <button class="btn btn-outline-primary" onclick="showResource('inauguration-details')">More Details</button>
+        </div>
+      </div>
+    </div>
+    <!-- AI Pledge Card -->
+    <div class="col">
+      <div class="card h-100 text-center p-3">
+        <img src="../assets/images/resources/offline_posters/AI PLEDGE.jpg" class="card-img-top rounded" alt="AI Pledge Poster">
+        <div class="card-body">
+          <h5 class="card-title">AI Pledge</h5>
+          <button class="btn btn-outline-primary" onclick="showResource('aipledge-details')">More Details</button>
+        </div>
+      </div>
+    </div>
+    <!-- She Leads Hackathon Card -->
+    <div class="col">
+      <div class="card h-100 text-center p-3">
+        <img src="../assets/images/resources/offline_posters/she_leads_poster.png" class="card-img-top rounded" alt="She Leads Poster">
+        <div class="card-body">
+          <h5 class="card-title">SHE Leads Hackathon</h5>
+          <button class="btn btn-outline-primary" onclick="showResource('hackathon-details')">More Details</button>
+        </div>
+      </div>
+    </div>
+    <!-- GKVK Visit Card -->
+    <div class="col">
+      <div class="card h-100 text-center p-3">
+        <img src="../assets/images/resources/offline_posters/gkvk poster .jpg" class="card-img-top rounded" alt="GKVK Poster">
+        <div class="card-body">
+          <h5 class="card-title">GKVK Industrial Visit</h5>
+          <button class="btn btn-outline-primary" onclick="showResource('gkvk-details')">More Details</button>
+        </div>
+      </div>
+    </div>
+    <!-- Club Members Meeting Card -->
+    <div class="col">
+      <div class="card h-100 text-center p-3">
+        <img src="../assets/images/resources/offline_posters/harvest club members meeting.jpg" class="card-img-top rounded" alt="Club Meeting Poster">
+        <div class="card-body">
+          <h5 class="card-title">Club Members Meeting</h5>
+          <button class="btn btn-outline-primary" onclick="showResource('meeting-details')">More Details</button>
+        </div>
+      </div>
+    </div>
+     <!-- ALL events card-->
+    <div class="col">
+      <div class="card h-100 text-center p-3">
+        <img src="../assets/images/webinar.jpg" class="card-img-top rounded" alt="">
+        <div class="card-body">
+          <h5 class="card-title">All Events </h5>
+          <button class="btn btn-outline-primary" onclick="showResource('event-details')">View Resources</button>
+        </div>
+      </div>
+    </div>
+    </div> 
+  <!-- Detail Sections -->
+  <div id="inauguration-details" class="detail-section hidden">
+    <button class="btn btn-light mb-3" onclick="goBackToResources()">← Back to Resources</button>
+    <h4>Club Inauguration</h4>
+    <p>The club inauguration was conducted with enthusiastic participation, aiming to ignite curiosity and collaboration among students. The event began with a warm welcome address and inspiring speeches from distinguished guests and faculty members. Student leaders shared their vision and goals for the club, encouraging active involvement from peers. Various activities and interactive sessions helped create a vibrant and inclusive atmosphere. The event marked the beginning of a promising journey focused on innovation, teamwork, and shared learning.</p>
+    <iframe src="../assets/images/resources/inauguration_poster (2).pdf" height="600px"></iframe>
+  </div>
+  <div id="aipledge-details" class="detail-section hidden">
+    <button class="btn btn-light mb-3" onclick="goBackToResources()">← Back to Resources</button>
+    <h4>AI Pledge</h4>
+    <p>The AI Affirmation Pledge is an initiative by AICTE aimed at fostering a sense of ethical responsibility in AI development among students. It supports India's mission to lead in AI innovation and education through values-driven learning. Students pledged to uphold fairness, accountability, and transparency while working with AI. The initiative also emphasizes the societal impact of AI and the importance of inclusive technologies. It encourages youth to contribute positively to the future of AI in India.</p>
+    <iframe src="../assets/images/resources/AI PLEDGE.pdf" height="600px"></iframe>
+  </div>
+  <div id="hackathon-details" class="detail-section hidden">
+    <button class="btn btn-light mb-3" onclick="goBackToResources()">← Back to Resources</button>
+    <h4>She Leads Hackathon</h4>
+    <p>The She Leads Hackathon was a dynamic event dedicated to celebrating women in technology and promoting gender inclusivity in innovation. Participants worked in teams to solve real-world problems using technology, guided by experienced mentors. The hackathon fostered collaboration, creativity, and critical thinking. Final projects were showcased at a closing ceremony, where the most innovative solutions were recognized and rewarded. The event also served as a platform to inspire young women to pursue careers in STEM fields.</p>
+    <iframe src="../assets/images/resources/she_leads.pdf" height="600px"></iframe>
+  </div>
+  <div id="gkvk-details" class="detail-section hidden">
+    <button class="btn btn-light mb-3" onclick="goBackToResources()">← Back to Resources</button>
+    <h4>Industrial Visit to GKVK</h4>
+    <p>The educational visit to the University of Agricultural Sciences, Bengaluru (GKVK), gave students valuable exposure to modern agricultural technologies and research. They observed sustainable farming practices and engaged with experts in agricultural science. The tour included demonstrations of equipment, bio-labs, and model farms. Students gained insights into ongoing innovations aimed at enhancing food security and environmental stewardship. This experience helped bridge the gap between theoretical knowledge and practical applications in agriculture.</p>
+    <iframe src="../assets/images/resources/gkvk poster .pdf" height="600px"></iframe>
+  </div>
+  <div id="meeting-details" class="detail-section hidden">
+    <button class="btn btn-light mb-3" onclick="goBackToResources()">← Back to Resources</button>
+    <h4>Club Members Meeting</h4>
+<p>Regular club meetings are organized to assess the progress of ongoing projects and set objectives for upcoming initiatives. These sessions encourage open discussion, allowing members to present ideas and collaborate on planning. Key agenda items include event coordination, workshop proposals, and skill-development activities. The meetings foster leadership, communication, and teamwork among students. During one such session, a recruitment drive was held to induct new members committed to the club’s goals and values.</p>
+    <iframe src="../assets/images/resources/harvest club members meeting_poster.pdf" height="600px"></iframe>
+  </div>
+  <div id="event-details" class="detail-section hidden">
+  <button class="btn btn-light mb-3" onclick="goBackToResources()">← Back to Resources</button>
+  <h4 class="text-white fw-bold mb-4">Event Resources</h4>
+  <div class="row row-cols-1 row-cols-md-3 g-4"> 
+    <!-- Card 1 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/online_posters/application of generative ai using langchain.jpg" class="card-img-top" alt="Langchain">
+        <div class="card-body">
+          <h5 class="card-title">Generative AI using Langchain</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/online_posters/application of generative ai using langchain.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/online_posters/clod based solution for enhancing agricultural activity.png" class="card-img-top" alt="Agri Tech">
+        <div class="card-body">
+          <h5 class="card-title">Cloud Solution for Agricultural Activity</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/online_posters/clod based solution for enhancing agricultural activity.png" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/online_posters/crafting patents.jpg" class="card-img-top" alt="GKVK">
+        <div class="card-body">
+          <h5 class="card-title">Crafting Patents </h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/online_posters/crafting patents.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/online_posters/deep learning using python.jpg" class="card-img-top" alt="Deep Learning">
+        <div class="card-body">
+          <h5 class="card-title">Deep Learning Using Python</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/online_posters/deep learning using python.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/online_posters/low-code no-code aware.jpg" class="card-img-top" alt="LCNC">
+        <div class="card-body">
+          <h5 class="card-title">Low-Code No-Code Awareness</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/online_posters/low-code no-code aware.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/online_posters/reinforcement lerning meeting 5g network.jpg" class="card-img-top" alt="RL 5G">
+        <div class="card-body">
+          <h5 class="card-title">Reinforcement Learning & 5G</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/online_posters/reinforcement lerning meeting 5g network.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 7-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/a technical talk on generative ai_poster.jpg" class="card-img-top" alt="Responsible AI">
+        <div class="card-body">
+          <h5 class="card-title">A technical talk on generative ai</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/a technical talk on generative ai_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+     <!-- Card 8 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/AI Today, AGI Tomorrow Understanding the Role of Generative AI(Futuristic and engaging)”.png" class="card-img-top" alt="Deep Learning">
+        <div class="card-body">
+          <h5 class="card-title">AI Today, AGI Tomorrow Understanding the Role of Generative AI(Futuristic and engaging)</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/AI Today, AGI Tomorrow Understanding the Role of Generative AI(Futuristic and engaging)”.png" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+     <!-- Card 9 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/colaberative coding python peer-to-peer mastery_poster.jpg" class="card-img-top" alt="Deep Learning">
+        <div class="card-body">
+          <h5 class="card-title">Colaberative coding python peer-to-peer mastery</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/colaberative coding python peer-to-peer mastery_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+     <!-- Card 10 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/exploring azure factory for data integration_poster.jpg" class="card-img-top" alt="Deep Learning">
+        <div class="card-body">
+          <h5 class="card-title">xEploring azure factory for data integration</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/exploring azure factory for data integration_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+     <!-- Card 11 -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/future of ai and robotics in agriculture_poster.jpg" class="card-img-top" alt="Deep Learning">
+        <div class="card-body">
+          <h5 class="card-title">Future of ai and robotics in agriculture</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/future of ai and robotics in agriculture_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 12-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/responsible ai_poster.jpg" class="card-img-top" alt="Vehicle AI">
+        <div class="card-body">
+          <h5 class="card-title">Responsible AI</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/responsible ai_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 13-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/tranforming businesses with cutting-edge ai solutions from generative ai to intellegent automation_poster.jpg" class="card-img-top" alt="Vehicle AI">
+        <div class="card-body">
+          <h5 class="card-title">Tranforming businesses with cutting-edge ai solutions from generative ai to intellegent automation</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/tranforming businesses with cutting-edge ai solutions from generative ai to intellegent automation_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+     <!-- Card 14-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/transforming data into interactive visual insights with power bi_poster.jpg" class="card-img-top" alt="Vehicle AI">
+        <div class="card-body">
+          <h5 class="card-title">Transforming data into interactive visual insights with power bi_poster.jpg</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/transforming data into interactive visual insights with power bi_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+     <!-- Card 15-->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="../assets/images/resources/offline_posters/Vehicle_automation_poster.jpg" class="card-img-top" alt="Vehicle AI">
+        <div class="card-body">
+          <h5 class="card-title">Vehicle Automation</h5>
+        </div>
+        <div class="card-footer">
+          <a href="../assets/images/resources/offline_posters/Vehicle_automation_poster.jpg" class="btn btn-outline-primary btn-sm" target="_blank">View Poster</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js" async defer></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harvest Club Membership</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg,#00AEAE 0%,#008B8B 100%);
+      font-family: 'Poppins',sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .membership-card {
+      background: rgba(255,255,255,0.95);
+      max-width: 430px;
+      width: 96vw;
+      border-radius: 28px;
+      box-shadow: 0 8px 38px rgba(0,139,139,0.10);
+      padding: 40px 34px 30px 34px;
+      margin: 48px auto;
+      animation: fadeInUp 1s cubic-bezier(.62,.28,.23,.99);
+      position: relative;
+    }
+    .membership-header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .membership-header img {
+      width: 62px;
+      margin-bottom: 7px;
+      border-radius: 13px;
+    }
+    .membership-header h1 {
+      font-size: 2.1rem;
+      color: #008B8B;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .membership-header .subtitle {
+      color: #595;
+      opacity: 0.83;
+      font-size: 1.02rem;
+      font-weight: 500;
+    }
+    .membership-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 12px;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 4px;
+    }
+    .form-group label {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      color: #008080b4;
+      background: transparent;
+      font-size: 1rem;
+      font-weight: 500;
+      pointer-events: none;
+      transition: 0.25s;
+      padding: 0 4px;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 14px 14px 14px 16px;
+      font-size: 1rem;
+      border-radius: 9px;
+      border: 1.5px solid #e0e0e0;
+      background: #f8fafb;
+      transition: border-color 0.26s, background 0.22s;
+      outline: none;
+      margin-top: 2px;
+      font-family: 'Poppins',sans-serif;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #008B8B;
+      background: #fff;
+    }
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group select:focus + label,
+    .form-group select:valid + label {
+      top: -12px;
+      left: 10px;
+      background: rgba(255,255,255,0.9);
+      font-size: 0.92rem;
+      color: #008B8B;
+      padding: 0 3px;
+    }
+    .form-row {
+      display: flex;
+      gap: 14px;
+    }
+    .form-row > .form-group {
+      flex: 1 1 50%;
+    }
+    .membership-btn {
+      margin-top: 10px;
+      padding: 13px 0;
+      width: 100%;
+      background: linear-gradient(90deg,#00AEAE,#008B8B);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.11rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 10px rgba(0,139,139,0.12);
+      transition: background 0.26s, transform 0.16s;
+      animation: bounceIn 0.85s 0.3s backwards;
+    }
+    .membership-btn:hover {
+      background: linear-gradient(90deg,#008B8B,#00AEAE);
+      transform: translateY(-2px) scale(1.025);
+      box-shadow: 0 4px 16px rgba(0,139,139,0.15);
+    }
+    .form-note {
+      color: #666a;
+      font-size: 0.98rem;
+      margin-top: -6px;
+      margin-bottom: 4px;
+      text-align: right;
+    }
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(60px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes bounceIn {
+      0%{opacity:0; transform:scale(0.95);}
+      60%{opacity:1; transform:scale(1.06);}
+      100%{opacity:1; transform:scale(1);}
+    }
+    @media (max-width:530px) {
+      .membership-card { padding: 22px 2vw 13px 2vw; }
+      .membership-header img { width: 39px; }
+      .membership-header h1 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="membership-card">
+    <div class="membership-header">
+      <img src="../assets/images/harvest logo pn.png" alt="Harvest Logo"/>
+      <h1>Join Harvest Club</h1>
+      <div class="subtitle">Become part of our vibrant innovation network</div>
+    </div>
+    <form
+      class="membership-form"
+      id="membershipForm"
+      autocomplete="on"
+      action="https://formspree.io/f/mdkzpjqd"
+      method="POST"
+    >
+      <div class="form-group">
+        <input type="text" id="fullname" name="Full Name" required placeholder=" " autocomplete="name"/>
+        <label for="fullname">Full Name</label>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="rollnum" name="Roll Number" required placeholder=" "/>
+          <label for="rollnum">Roll Number</label>
+        </div>
+        <div class="form-group">
+          <select id="branch" name="Branch" required autocomplete="organization">
+            <option value="" disabled selected hidden></option>
+            <option value="CAI">CAI</option>
+            <option value="CSE">CSE</option>
+            <option value="ISE">ISE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+          </select>
+          <label for="branch">Branch</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <select id="semester" name="Semester" required>
+            <option value="" disabled selected hidden></option>
+            <option>1st</option>
+            <option>2nd</option>
+            <option>3rd</option>
+            <option>4th</option>
+            <option>5th</option>
+            <option>6th</option>
+            <option>7th</option>
+            <option>8th</option>
+          </select>
+          <label for="semester">Semester</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="College Email ID" required placeholder=" " autocomplete="email"/>
+          <label for="email">College Email ID</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="phone" name="Phone Number" required placeholder=" " minlength="10" maxlength="15" pattern="[0-9]{10,15}" autocomplete="tel"/>
+        <label for="phone">Phone Number</label>
+      </div>
+      <div class="form-group">
+        <select id="previousMember" name="Previous Member" required>
+          <option value="" disabled selected hidden></option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <label for="previousMember">Are you a previous member?</label>
+      </div>
+      <div class="form-note">* All fields required</div>
+      <button class="membership-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

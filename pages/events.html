@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harvest Club Events</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #00AEAE 0%, #008B8B 100%);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .events-header {
+      text-align: center;
+      margin: 60px 0 30px 0;
+    }
+    .events-header img {
+      width: 62px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+    .events-header h1 {
+      font-size: 2.2rem;
+      color: #008B8B;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .events-header .subtitle {
+      color: #444c;
+      font-weight: 500;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+    }
+    .events-list {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto 36px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(332px, 1fr));
+      gap: 32px;
+      padding: 0 2vw;
+      animation: fadeIn 0.8s;
+    }
+    .event-card {
+      background: rgba(255,255,255,0.97);
+      border-radius: 1.18rem;
+      box-shadow: 0 6px 18px #008B8B22;
+      padding: 27px 23px 18px 23px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      animation: fadeInUp 1.07s cubic-bezier(.55,.25,.20,1.00);
+      border-left: 6px solid #00AEAE;
+      position: relative;
+      overflow: hidden;
+      min-height: 185px;
+    }
+    .event-date {
+      color: #008B8B;
+      font-size: 1.05rem;
+      font-weight: 700;
+      background: #e6fffa;
+      padding: 3px 12px;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+      min-width: 90px;
+      display: inline-block;
+    }
+    .event-title {
+      font-size: 1.29rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #1f2d31;
+      letter-spacing: 0.2px;
+    }
+    .event-type {
+      font-size: 1rem;
+      color: #317981;
+      font-weight: 600;
+      margin-bottom: 7px;
+      margin-top: -2px;
+    }
+    .event-speaker {
+      font-size: 0.97rem;
+      color: #527;
+      margin-bottom: 9px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .event-status {
+      margin-top: auto;
+      padding: 4px 12px;
+      font-size: 0.97rem;
+      border-radius: 12px;
+      background: #f8f8f8;
+      color: #008B8Bcc;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .event-btns {
+      margin-top: 13px;
+      display: flex;
+      gap: 10px;
+    }
+    .event-btn {
+      padding: 0.53rem 1.35rem;
+      background: linear-gradient(90deg,#00AEAE,#008B8B);
+      color: #fff;
+      border: none;
+      border-radius: 1.4rem;
+      font-weight: 600;
+      font-size: 1.01rem;
+      transition: background 0.22s, transform 0.14s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .event-btn:hover {
+      background: linear-gradient(90deg,#008B8B,#00AEAE);
+      transform: translateY(-2px) scale(1.03);
+    }
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(48px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @media (max-width: 600px) {
+      .events-list { gap: 12px; }
+      .event-card { padding: 12px 7px 14px 14px; }
+      .events-header h1 { font-size: 1.2rem;}
+      .events-header img { width: 36px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="events-header">
+    <img src="../assets/images/harvest logo pn.png" alt="Harvest Logo"/>
+    <h1>Events</h1>
+    <div class="subtitle">Explore our talks, workshops, hackathons, webinars, and more</div>
+  </div>
+  <div class="events-list">
+    <!-- Begin Event Cards -->
+    <div class="event-card">
+      <div class="event-date">10th November, 2023</div>
+      <div class="event-title">HARVEST Club Inauguration</div>
+      <div class="event-type">Inauguration</div>
+      <div class="event-speaker"><b>Guest:</b> Dr. B. L. Chidananda, Animal Science and Agriculture</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">10th November, 2023</div>
+      <div class="event-title">Relevance of AI and IOT in Agriculture</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. B. L. Chidananda</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">1st December, 2023</div>
+      <div class="event-title">Generative AI</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. Vimala Devi, DSCE</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">8th December, 2023</div>
+      <div class="event-title">Future of AI and Robotics in Agriculture</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Mr. Chidananda Basavani Suresh, RSC Systems</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">8th December, 2023</div>
+      <div class="event-title">Hands on Training on Implementing Deep Learning Application Using Python</div>
+      <div class="event-type">Webinar</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. Vishnu Srinivasa Murthy, Manipal Institute of Technology</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">8th, 15th, 22nd December, 2023</div>
+      <div class="event-title">Peer-to-Peer Python Training Workshop</div>
+      <div class="event-type">Workshop</div>
+      <div class="event-speaker"><b>Host:</b> Final Year Students, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">3rd May, 2024</div>
+      <div class="event-title">Reinforcement Learning Meets 5G Network</div>
+      <div class="event-type">Webinar</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. Shankar Kumar Ghosh, SNIoE</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">15th October, 2024</div>
+      <div class="event-title">Deep Learning Meets Language: Modern NLP Applications</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Ms. Devi. S, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">1-5 August, 2024</div>
+      <div class="event-title">5-Day Bridge Course on Gen AI</div>
+      <div class="event-type">Course</div>
+      <div class="event-speaker"><b>Speaker(s):</b> TBA</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">19th October, 2024</div>
+      <div class="event-title">Low-Code No-Code Aware</div>
+      <div class="event-type">Webinar</div>
+      <div class="event-speaker"><b>Speaker:</b> Mr. Mohit Kumar, Infosys Ltd</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">25th October, 2024</div>
+      <div class="event-title">Responsible AI</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Mr. Syed Quiser Ahmed, Infosys Responsible AI</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">9th November, 2024</div>
+      <div class="event-title">Applications of Generative AI Using LangChain</div>
+      <div class="event-type">Webinar</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. J. Alamelu Mangai, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">9th November, 2024</div>
+      <div class="event-title">Crafting Patents: Turning Ideas into Legal Protections</div>
+      <div class="event-type">Webinar</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. Sasidhar Babu Suvanam, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">6th December, 2024</div>
+      <div class="event-title">Unlocking Insights: Object Detection in Satellite Imagery</div>
+      <div class="event-type">Webinar</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. Kokila S, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">13th December, 2024</div>
+      <div class="event-title">Transforming Data into Interactive Visual Insights with Power BI</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Ms. Smitha S P, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">19th December, 2024</div>
+      <div class="event-title">Exploring Azure Data Factory for Data Integration</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Dr. Afroz Pasha, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">24th January, 2025</div>
+      <div class="event-title">Embracing Artificial Intelligence in Education</div>
+      <div class="event-type">Pledge</div>
+      <div class="event-speaker"><b>Department-Wide Initiative</b></div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">7th February, 2025</div>
+      <div class="event-title">Harvest Club Members Meeting</div>
+      <div class="event-type">Meeting</div>
+      <div class="event-speaker"><b>Coordinators:</b> Harvest Club Student Coordinators</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">7th March, 2025</div>
+      <div class="event-title">SheLeads Hackathon</div>
+      <div class="event-type">Hackathon</div>
+      <div class="event-speaker"><b>Speaker:</b> Ms. Mitali Bhargava, Google</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">14th March, 2025</div>
+      <div class="event-title">Harvest Club Members Meeting</div>
+      <div class="event-type">Meeting</div>
+      <div class="event-speaker"><b>Coordinators:</b> Harvest Club Student Coordinators</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">27th March, 2025</div>
+      <div class="event-title">Transforming Businesses with AI Solutions</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Tanay Rathore, Problock</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">28th March, 2025</div>
+      <div class="event-title">An Insight into Vehicle Automation</div>
+      <div class="event-type">Technical Talk</div>
+      <div class="event-speaker"><b>Speaker:</b> Mr. Santhosh Kumar K L, Presidency University</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">4th April, 2025</div>
+      <div class="event-title">Cloud-Based Solutions for Enhancing Agricultural Productivity</div>
+      <div class="event-type">Webinar</div>
+      <div class="event-speaker"><b>Speaker:</b> Mr. S John Joseph, Sudharsan Engineering College</div>
+      <div class="event-btns">
+        <a href="gallery.html" class="event-btn">See Photos</a>
+        <span class="event-status">Completed</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">Coming Soon</div>
+      <div class="event-title">Stay Tuned!</div>
+      <div class="event-desc">
+        We’re brewing something exciting for the community. Follow us and check back for regular updates.
+      </div>
+    </div>
+    <!-- End Event Cards -->
+  </div>
+  <div class="events-header" style="margin-top:38px;">
+    <div style="font-size:1.07rem; color:#ffffffcc; margin:18px auto 0 auto;">
+      Want to organize or suggest an event? <a href="contact.html" style="color:#aae9e9; font-weight:600; text-decoration:underline;">Contact us here</a>.
+    </div>
+  </div>
+</body>
+</html>
